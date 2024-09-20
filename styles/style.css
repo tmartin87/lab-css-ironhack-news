@@ -4,17 +4,27 @@ html {
   box-sizing: border-box;
   font-size: 16px;
 }
-  
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
-  
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
   margin: 0;
   padding: 0;
   font-weight: lighter;
 }
-
 
 /*  DO NOT REMOVE - Styling for the label showing the viewport width */
 .viewport-dimensions {
@@ -27,7 +37,7 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   padding: 5px 8px;
   font-size: 14px;
 }
-  
+
 /* STYLES */
 
 /*  Fonts */
@@ -175,7 +185,7 @@ header {
 .btn-blue {
   background-color: #007bff;
 }
-  
+
 /* Write your CSS below */
 
 @media (max-width: 760px) {
@@ -193,7 +203,8 @@ header {
   }
 
   h2 {
-    font-size: 1.5em;
+    font-size: 1.8em;
+    margin-top: 5%;
   }
 
   h3 {
@@ -201,6 +212,7 @@ header {
   }
 
   .navbar {
+    display: flex;
     flex-direction: column;
     justify-content: center;
   }
@@ -212,15 +224,18 @@ header {
   }
 
   .main-article {
+    display: flex;
     flex-direction: column;
   }
 
-  .main-article .image, .main-article .content {
+  .main-article .image,
+  .main-article .content {
     width: 100%;
     padding: 0;
   }
 
   .articles-container {
+    display: flex;
     flex-direction: column;
   }
 
@@ -230,7 +245,53 @@ header {
   }
 
   .btn {
-    width: 100%;
     text-align: center;
+  }
+}
+
+@media (min-width: 760px) and (max-width: 1024px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar li {
+    width: auto;
+    flex: 1;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #ffffff;
+  }
+
+  .navbar li:last-child {
+    border-right: none;
+  }
+
+  .main-article {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .main-article .image {
+    width: 50%;
+  }
+
+  .main-article .content {
+    width: 50%;
+    padding: 0 20px;
+  }
+
+  .articles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .article {
+    width: 48%;
+    margin-bottom: 40px;
   }
 }
